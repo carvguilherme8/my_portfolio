@@ -1,7 +1,20 @@
+<script>
+    import projects from "$lib/projects.json";
+    import Project from "$lib/Project.svelte";
+</script>
 
-<div id="myexp">
-    <h1>Experiências Profissionais</h1>
-    <p>- Minecraft World Cup 2017 Champion</p>
-    <p>- Roblox Regional Minas Gerais Champion</p>
-    <p>- Badminton Open Rio Champion</p>
+<svelte:head>
+  <title>Projetos</title>
+</svelte:head>
+
+<div class="content">
+    <h2>Projetos</h2>
+
+    <p>Meus { projects.length } projetos:</p>
+
+    <div class="projects">
+        {#each projects as p}
+        <Project data={p} hLevel="2" />
+        {/each}
+    </div>
 </div>

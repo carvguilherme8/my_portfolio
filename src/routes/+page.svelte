@@ -1,20 +1,48 @@
+<script>
+    import projects from "$lib/projects.json";
+    import Project from "$lib/Project.svelte";
+    let profileData = fetch("https://api.github.com/users/carvguilherme8");
+</script>
+
 <div id="title">
-    Portfolio do Guigas
+    <h1>Portfolio do Guigas</h1>
 </div>
 
-<div id="moo"><img src="../images/moodeng.png"></div>
-
 <div id="myexp">
-    <h1>Experiências Profissionais</h1>
+    <h2>Experiências Profissionais</h2>
     <p>- Minecraft World Cup 2017 Champion</p>
     <p>- Roblox Regional Minas Gerais Champion</p>
     <p>- Badminton Open Rio Champion</p>
 </div>
 
-<h1 style="text-align: center; font-weight: 300;">Meus filmes favoritos</h1>
-<div id="shreks">
-    <div><img src="../images/shrek1.jpg"></div>
-    <div><img src="../images/shrek2.jpg"></div>
-    <div><img src="../images/shrek3.jpg"></div>
-    <div><img src="../images/shrek4.jpg"></div>
+{#await fetch("https://api.github.com/users/mike")}
+  <p>Loading...</p>
+{:then response}
+  {#await response.json()}
+    <p>Decoding...</p>
+  {:then data} 
+    <section>
+      <h2>My Github Stats</h2>
+      <dl>
+        <dt>Followers</dt>
+        <dd>{data.followers}</dd>
+        <dt>Following</dt>
+        <dd>{data.following}</dd>
+        <dt>Public Repos</dt>
+        <dd>{data.public_repos}</dd>
+      </dl>
+    </section>
+  {:catch error}
+    <p class="error">Something went wrong: {error.message}</p>
+  {/await}
+  {:catch error}
+    <p class="error">Something went wrong: {error.message}</p>
+{/await}
+
+
+<div class="projects">
+    {#each projects.slice(0, 3) as p}
+    <Project data={p} />
+    {/each}
 </div>
+
