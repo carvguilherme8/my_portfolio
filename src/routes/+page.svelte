@@ -15,7 +15,7 @@
     <p>- Badminton Open Rio Champion</p>
 </div>
 
-{#await fetch("https://api.github.com/users/mike")}
+{#await fetch("https://api.github.com/users/carvguilherme8")}
   <p>Loading...</p>
 {:then response}
   {#await response.json()}
