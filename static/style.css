@@ -1,194 +1,222 @@
 :root {
-    --color-accent: oklch(65% 50% 0);
-    --border-gray: oklch(80% 3% 200);
-	  --border-blue: oklch(70% 0.1 202);
-	  --color-header-bg: oklch(72.5% 0.0715 202 / 50%);
+  /* Retro & Pixel Typography */
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-ui: 'Pixelify Sans', monospace;
+  --font-hud: 'VT323', monospace;
+  --font-body: 'Share Tech Mono', monospace;
+
+  /* Color scale: primary blue + gold, plus black/grey neutrals below.
+     --ps-gold is the ONLY secondary accent (metadata, dates, badges, awards).
+     Everything else — including the ▲◼✖● glyphs — uses --color-accent. */
+  --ps-gold: #c97700;
+
+  /* Primary PS1 Accent (Official Sony PlayStation Blue) — the one color
+     used for links, buttons, active states, bars and text highlights. */
+  --color-accent: #003791;
+  --color-accent-hover: #004fd6;
+  --color-accent-light: rgba(0, 55, 145, 0.12);
+
+  /* DEFAULT THEME: PlayStation 1 Console Chassis & Memory Card Grey */
+  --bg-body: #c4c7cf;
+  --bg-card: #d8dbe2;
+  --bg-card-header: #bcc1cc;
+  --bg-card-inset: #aeb3bf;
+  --text-main: #0e121b;
+  --text-muted: #3d4352;
+  --border-color: #727788;
+  --border-highlight: #ffffff;
+  --border-shadow: #545866;
+  --shadow-pixel: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #686d7e, 3px 3px 0px rgba(16, 20, 30, 0.4);
+  --shadow-btn: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #5c6172, 2px 2px 0px rgba(0, 0, 0, 0.35);
+  --scanline-opacity: 0.025;
 }
 
-body {
-    /* Set line height to 1.5 times the font size
-       and use the OS’s UI font as the website font
-     */
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: auto;
-    padding: 1cm;
-   }
+/* Explicit PS1 Classic Light Theme */
+:root[style*="color-scheme: light"] {
+  --color-accent: #003791;
+  --color-accent-hover: #004fd6;
+  --color-accent-light: rgba(0, 55, 145, 0.12);
 
-nav ul,
-nav il {
-    display: contents; /* step 2.1 */
+  --bg-body: #c4c7cf;
+  --bg-card: #d8dbe2;
+  --bg-card-header: #bcc1cc;
+  --bg-card-inset: #aeb3bf;
+  --text-main: #0e121b;
+  --text-muted: #3d4352;
+  --border-color: #727788;
+  --border-highlight: #ffffff;
+  --border-shadow: #545866;
+  --shadow-pixel: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #686d7e, 3px 3px 0px rgba(16, 20, 30, 0.4);
+  --shadow-btn: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #5c6172, 2px 2px 0px rgba(0, 0, 0, 0.35);
+  --scanline-opacity: 0.025;
 }
 
-nav {
-    display: flex;
-    margin-bottom: 1em; /*step 2.2 part 2*/
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+/* Optional CRT / PS1 Midnight Boot Screen Theme */
+:root[style*="color-scheme: dark"] {
+  --color-accent: #00f0ff;
+  --color-accent-hover: #7cf7ff;
+  --color-accent-light: rgba(0, 240, 255, 0.16);
+
+  --bg-body: #070913;
+  --bg-card: #0f1322;
+  --bg-card-header: #171d33;
+  --bg-card-inset: #05070e;
+  --text-main: #f0f4fc;
+  --text-muted: #8d98b0;
+  --border-color: #2c3354;
+  --border-highlight: #4d5788;
+  --border-shadow: #000000;
+  --shadow-pixel: 4px 4px 0px #000000, 0 0 16px rgba(0, 240, 255, 0.12);
+  --shadow-btn: 3px 3px 0px #000000, inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+  --scanline-opacity: 0.12;
+
+  --ps-gold: #ffd600;
 }
 
-nav a {
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
-    padding: 0.5em;
-}
-
-nav a.current {
-  border-bottom-width: 0.4em;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
-  padding-bottom: 0.1em;
-  font-weight: bold; 
-}
-
-nav a:hover{
-  border-bottom-width: 0.4em;
-  border-bottom-style: solid;
-  border-bottom-color: var(--collor-accent);
-  padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-}
-
-input,textarea,button {
-  font: inherit; /*step 3.1 schmoopsie.poo@mic.fr*/
-}
-
-/* input,textarea,button {
-  font: inherit;
-  width: 100%;
+* {
   box-sizing: border-box;
 }
 
-label, input, textarea, button {
-  display: block;
-}
-label { margin-block: 1rem;} */
-
-form {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1em;
-}
-form label {
-  display: grid;
-  grid-template-columns: subgrid;
-}
-#button, label{
-  grid-column: 1 / -1;
+html {
+  scroll-behavior: smooth;
+  image-rendering: auto;
 }
 
-img{
-	max-width: 100%; /*step 4.2*/
+body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 104ch;
+  margin-inline: auto;
+  padding: 1.5rem 1.25rem 5rem 1.25rem;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.25) 0%, transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, var(--scanline-opacity)) 0px,
+      rgba(0, 0, 0, var(--scanline-opacity)) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
 }
 
-.projects {
-	display:grid; /*step 4.3*/
-	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));/*step 4.3*/
-	min-width: 15em; /*step 4.3*/
-	max-width: 1fr; /*step 4.3*/
-}
-
-article{
-	margin: 10px; /*step 4.3*/
-	display: grid; /*step 4.4*/
-	grid-template-rows: subgrid; /*step 4.4*/
-	grid-row: span 3; /*step 4.4*/
-}
-
-article h2{
-	margin: 0; /*step 4.4*/
+/* Headings with Retro Pixel Fonts */
+h1, h2, h3, h4 {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-main);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 h1 {
-	font-size: 400%; /*step 4.5*/
-}
-h1, h2, h3, h4, h5, h6{
-	line-height: 1.1; /*step 4.5*/
-	text-wrap: balance; /*step 4.5*/
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  text-shadow: 1px 1px 0px var(--border-highlight);
 }
 
-.resume{
-	display: grid; /*step 5 free*/
-	grid-template-columns: repeat(2, 1fr); /*step 5 free*/
-	min-width: 25em; /*step 5 free*/
+h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  border-left: 4px solid var(--color-accent);
+  padding-left: 0.75rem;
+  margin-top: 2.5rem;
 }
-header{
-	background-color: var(--color-header-bg); /*step 5 free*/
-	font-weight: bold; /*step 5 free*/
-	text-transform: uppercase; /*step 5 free*/
-} 
 
-dl{
+h3 {
+  font-size: 1.05rem;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* Retro Pixel Button Styles */
+button, .retro-btn {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-btn);
+  padding: 0.65rem 1.2rem;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+button:active, .retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+button:focus-visible, .retro-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Projects grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+/* Definition lists / HUD Stats */
+dl {
   display: grid;
   grid-template-columns: auto;
+  gap: 0.5rem;
 }
-dt{
-  grid-row: 1;
-  font-family: inherit;
-  font-weight: bold;
-  color: var(--border-gray);
+
+dt {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--text-muted);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-dd{
-  font-family: inherit;
-  font-weight: bold;
+
+dd {
+  font-family: var(--font-hud);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 0;
+  color: var(--text-main);
+  line-height: 1.1;
 }
-section{
-  border-width:0.15em;
-  border-style:solid;
-  border-color:var(--border-gray);
-  padding-left: 1em;
-  padding-right: 1em;
+
+/* Forms */
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
 }
-.contact-container {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-  margin: 0 auto;
-}
-.contact-title {
-  font-size: 24px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact-label {
-  font-size: 14px;
-  color: #555555;
-  text-align: left;
-}
-.contact-input, .contact-textarea {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-.contact-input:focus, .contact-textarea:focus {
-  border-color: #007bff;
-}
-.contact-button {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.contact-button:hover {
-  background-color: #0056b3;
+
+/* PS1 Controller Glyph Helpers */
+.ps-symbol {
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--color-accent);
 }

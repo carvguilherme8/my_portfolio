@@ -1,38 +1,33 @@
 [
 	{
-		"title": "GTA 6",
-		"year":"2024",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+		"title": "O Que Tem Pra Hoje (oq-tem-pra-hoje)",
+		"year": "2026",
+		"category": "Fullstack / Edge Serverless / PWA",
+		"image": "/images/oq_logo.png",
+		"description": "Plataforma e PWA que centraliza e notifica transmissões oficiais e gratuitas de futebol no YouTube (CazéTV, Canal GOAT, ge tv), com agenda personalizada ('Time do Coração' em localStorage) e lembretes Web Push nativos sem necessidade de login.",
+		"problem": "Com a fragmentação dos direitos de transmissão esportiva, canais gratuitos no YouTube transmitem jogos oficiais de grandes ligas (Brasileirão, Premier League, La Liga, etc.), mas não existia uma fonte centralizada ou API pública que dissesse exatamente 'onde e quando assistir de graça hoje'.",
+		"highlights": [
+			"Pipeline Híbrido de Dados: Combina football-data.org (calendário/metadados), web scraping server-side estruturado da grade de TV (FotMob) e YouTube Data API v3 para detecção em tempo real de transmissões.",
+			"Algoritmo de Matching e Quota Optimization: Sanitização de títulos e correspondência fuzzy entre nomes de clubes e lives, com cron otimizado para operar dentro do limite diário gratuito da API do YouTube.",
+			"Lembretes Web Push sem Conta: Notificações push nativas no navegador (~5 minutos antes da partida) utilizando Web Push API e Service Workers com VAPID, sem exigir cadastro ou senha.",
+			"Edge Serverless Deployment: Construído com Next.js 16 (App Router) e React 19 no Cloudflare Workers através do OpenNext, garantindo baixíssima latência global com custo de infraestrutura quase zero."
+		],
+		"tags": ["Next.js 16", "React 19", "Cloudflare Workers", "Supabase", "Web Push", "TypeScript", "Tailwind v4", "PWA"]
 	},
 	{
-		"title": "Chat GPT 6",
-		"year":"2024",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
-	},
-	{
-		"title": "Windows 11",
-		"year":"2024",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Eligendi tenetur quae quos recusandae est. Cumque, voluptatem. Quo nihil dignissimos molestiae explicabo praesentium aspernatur debitis, illo rerum possimus quam ducimus earum nulla officiis maiores itaque repellat corporis soluta labore?"
-	},
-	{
-		"title": "GIT",
-		"year":"2023",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
-	},
-	{
-		"title": "Nvidia RTX",
-		"year":"2022",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Laborum alias ea unde harum aspernatur? Molestiae, veritatis, possimus, numquam ex excepturi quod ducimus sit odit optio quibusdam sequi aliquid itaque tempore perspiciatis placeat expedita vero voluptates. Sit, aspernatur sint!"
-	},
-	{
-		"title": "Android",
-		"year":"2022",
-		"image": "https://i.etsystatic.com/iap/a0f246/5502938083/iap_640x640.5502938083_69958kp0.jpg",
-		"description": "Est neque, velit nam rerum error odio voluptates voluptatem magnam laboriosam ad? Doloribus, id et itaque unde porro totam ullam quaerat blanditiis odit animi eveniet aut, voluptate velit iure odio."
+		"title": "Neurovida — Gestão Terapêutica ABA",
+		"year": "2026",
+		"category": "Fullstack Web App / HealthTech / PWA",
+		"image": "/images/neurovida_logo.png",
+		"description": "Plataforma clínica PWA e offline-first para gestão de terapias ABA no desenvolvimento infantil, com coleta de dados comportamentais em tempo real (DTT/NET), prontuário eletrônico unificado e portal exclusivo da família.",
+		"problem": "Digitaliza e automatiza o registro de sessões de terapia comportamental (DTT/NET) em clínicas de desenvolvimento infantil, permitindo coleta contínua mesmo sem internet e acompanhamento gráfico da evolução da criança por terapeutas e pais.",
+		"highlights": [
+			"Offline-first com sincronização assíncrona automática via Dexie.js (IndexedDB) local e Supabase (PostgreSQL & Auth).",
+			"Progressive Web App (PWA) instalável e responsivo para uso prático em tablets e celulares em sala de terapia.",
+			"Controle de acesso multi-perfil com isolamento de permissões (Admin, Terapeuta e Portal da Família).",
+			"Visualização interativa de curvas de aprendizagem com Recharts e geração de relatórios clínicos em PDF (jsPDF).",
+			"Suíte completa de testes automatizados E2E com Playwright e testes unitários com Vitest."
+		],
+		"tags": ["React", "Vite", "Tailwind CSS", "Dexie.js", "Supabase", "PWA", "Playwright", "Vitest", "Recharts", "jsPDF"]
 	}
 ]
