@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>CURRÍCULO | Guilherme Carvalho</title>
+  <title>Currículo | Guilherme Carvalho</title>
   <meta name="description" content="Currículo de Guilherme Carvalho - Estudante de Ciência de Dados e Inteligência Artificial na FGV EMAp, estagiário no Rei do Pitaco e medalhista da OBMEP." />
 </svelte:head>
 
@@ -9,7 +9,7 @@
       <div class="tag-ps1">[PERFIL PROFISSIONAL]</div>
       <h1>CURRÍCULO</h1>
       <p class="header-desc">
-        Graduando em Ciência de Dados e Inteligência Artificial na FGV EMAp (CR 8.51).
+        Graduando em Ciência de Dados e Inteligência Artificial na FGV EMAp.
         Experiência com Machine Learning, Engenharia de Dados, Inferência Causal e Testes A/B.
       </p>
     </div>
@@ -20,10 +20,9 @@
   </header>
 
   <!-- Academic Profile & Competencies -->
-  <section class="attributes-panel">
-    <div class="panel-header">
-      <span>PERFIL ACADÊMICO & COMPETÊNCIAS</span>
-      <span class="ps-gold">FGV EMAp • CR: 8.51</span>
+  <section class="retro-card">
+    <div class="card-bar">
+      <h3>PERFIL ACADÊMICO & COMPETÊNCIAS</h3>
     </div>
     <div class="attributes-grid">
       <div class="attr-box">
@@ -56,9 +55,9 @@
     </div>
     <div class="skills-categories">
       <div class="cat-col">
-        <h4>[DADOS & APRENDIZADO DE MÁQUINA]</h4>
+        <h4>DADOS & APRENDIZADO DE MÁQUINA</h4>
         <ul>
-          <li><strong>Modelagem</strong>: Machine Learning, XGBoost, LightGBM, scikit-learn</li>
+          <li><strong>Modelagem</strong>: Machine Learning, Deep Learning, XGBoost, LightGBM</li>
           <li><strong>Estatística</strong>: Inferência Causal, Controles Sintéticos, Diff-in-Diff</li>
           <li><strong>Previsão & Simulação</strong>: Séries Temporais, Simulações de Monte Carlo</li>
           <li><strong>Experimentação</strong>: Elaboração e Análise de Testes A/B</li>
@@ -66,11 +65,11 @@
       </div>
 
       <div class="cat-col">
-        <h4>[PROGRAMAÇÃO & ENGENHARIA DE DADOS]</h4>
+        <h4>PROGRAMAÇÃO & ENGENHARIA DE DADOS</h4>
         <ul>
           <li><strong>Linguagens</strong>: Python (Pandas, NumPy), C++, SQL, HTML/CSS</li>
           <li><strong>Data Engineering</strong>: BigQuery, dbt, Apache Airflow</li>
-          <li><strong>Web & Frontend</strong>: React.js, SvelteKit, D3.js</li>
+          <li><strong>Web & Frontend</strong>: React.js, SvelteKit, Node.js, Streamlit</li>
           <li><strong>Ferramentas</strong>: Git/GitHub, Looker Studio, Power BI, Figma</li>
           <li><strong>Idiomas</strong>: Inglês Avançado</li>
         </ul>
@@ -89,7 +88,7 @@
         <span class="quest-name">ESTAGIÁRIO EM CIÊNCIA DE DADOS</span>
         <span class="quest-period">08/2025 - 05/2026</span>
       </div>
-      <span class="quest-guild">[REI DO PITACO]</span>
+      <span class="quest-guild">REI DO PITACO</span>
       
       <div class="exp-subgroup">
         <div class="exp-subheading">&gt; ATUAÇÃO NO SETOR FINANCEIRO:</div>
@@ -130,7 +129,7 @@
           </div>
           <span class="quest-guild">GRADUAÇÃO EM CIÊNCIA DE DADOS E INTELIGÊNCIA ARTIFICIAL</span>
           <p class="quest-summary">
-            Cursando o 8º período. Desempenho Acadêmico (CR): <strong>8.51</strong>. Previsão de formatura: 12/2026.
+            Cursando o 8º período. Previsão de formatura: 12/2026.
           </p>
         </div>
 
@@ -151,9 +150,10 @@
 
         <div class="quest-item">
           <div class="quest-title-row">
-            <span class="quest-name">BOLSISTA CNPq (PICME - MESTRADO)</span>
+            <span class="quest-name">BOLSISTA CNPq</span>
             <span class="quest-period">02/2024 - 12/2025</span>
           </div>
+          <span class="quest-guild">PROGRAMA DE INICIAÇÃO CIENTÍFICA E MESTRADO (PICME)</span>
           <p class="quest-summary">Programa de bolsas para cursar disciplinas do mestrado, visando o aperfeiçoamento de habilidades matemáticas avançadas.</p>
         </div>
 
@@ -177,9 +177,10 @@
 
         <div class="quest-item">
           <div class="quest-title-row">
-            <span class="quest-name">BOLSISTA CNPq (PIC - OBMEP)</span>
+            <span class="quest-name">BOLSISTA CNPq</span>
             <span class="quest-period">01/2017 - 12/2022</span>
           </div>
+          <span class="quest-guild">PROGRAMA DE INICIAÇÃO CIENTÍFICA JÚNIOR (PIC-OBMEP)</span>
           <p class="quest-summary">Programa de Iniciação Científica Júnior oferecido pelo CNPq a medalhistas da OBMEP.</p>
         </div>
       </section>
@@ -193,19 +194,19 @@
         </div>
         <ul class="trophies-list">
           <li>
-            <span class="trophy-badge trophy-plat">🏆 BOLSA INTEGRAL</span>
+            <span class="trophy-badge trophy-plat">BOLSA INTEGRAL</span>
             <strong>FGV - CENTRO PARA O DESENVOLVIMENTO DA MATEMÁTICA E CIÊNCIAS (CDMC)</strong>
             <span class="trophy-date">02/2023 - ATUAL</span>
             <span class="trophy-desc">Bolsa de estudos integral e auxílio concedidos por mérito devido ao histórico de excelência em olimpíadas de conhecimento.</span>
           </li>
           <li>
-            <span class="trophy-badge trophy-gold">🥇 1x OURO & 🥈 5x PRATA</span>
+            <span class="trophy-badge trophy-gold">1x OURO & 5x PRATA</span>
             <strong>OBMEP (OLIMPÍADA BRASILEIRA DE MATEMÁTICA DAS ESCOLAS PÚBLICAS)</strong>
             <span class="trophy-date">2016 - 2021</span>
             <span class="trophy-desc">6 medalhas nacionais consecutivas na maior olimpíada científica do país.</span>
           </li>
           <li>
-            <span class="trophy-badge trophy-gold">🥇 MEDALHISTA NACIONAL</span>
+            <span class="trophy-badge trophy-gold">MEDALHISTA NACIONAL</span>
             <strong>OBA (OLIMPÍADA BRASILEIRA DE ASTRONOMIA E ASTRONÁUTICA)</strong>
             <span class="trophy-date">2022</span>
             <span class="trophy-desc">Premiação por desempenho de destaque em física astronômica e astronáutica.</span>
@@ -255,34 +256,9 @@
     border-color: #ffffff;
   }
 
-  /* Attributes Panel */
-  .attributes-panel {
-    background: var(--bg-card);
-    border: 3px solid var(--border-color);
-    box-shadow: var(--shadow-pixel);
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .panel-header {
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-ui);
-    font-size: 0.7rem;
-    color: var(--color-accent);
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-
-  .ps-gold {
-    color: var(--ps-gold);
-  }
-
   .attributes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 1.25rem;
   }
 
@@ -337,7 +313,7 @@
 
   .skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 2rem;
   }
 
@@ -350,7 +326,8 @@
   .cat-col ul {
     margin: 0;
     padding-left: 1.25rem;
-    line-height: 1.8;
+    font-size: 0.92rem;
+    line-height: 1.6;
     color: var(--text-muted);
   }
 
@@ -373,9 +350,10 @@
 
   .quest-title-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    gap: 0.5rem;
+    gap: 0.25rem 0.5rem;
   }
 
   .quest-name {
@@ -388,7 +366,7 @@
   .quest-period {
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--ps-gold);
+    color: var(--color-accent);
     white-space: nowrap;
   }
 
@@ -484,7 +462,7 @@
 
   .trophy-gold {
     background: var(--bg-card);
-    color: var(--ps-gold);
+    color: var(--color-accent);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-btn);
   }
@@ -519,7 +497,7 @@
       color: black !important;
     }
 
-    .retro-card, .attributes-panel {
+    .retro-card {
       box-shadow: none !important;
       border: 1px solid #aaa !important;
     }

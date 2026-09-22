@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>GUILHERME CARVALHO | FGV EMAp Data Science & AI</title>
+  <title>Guilherme Carvalho | FGV EMAp Data Science & AI</title>
   <meta name="description" content="Portfólio de Guilherme Carvalho - Ciência de Dados e Inteligência Artificial na FGV EMAp. Machine Learning, Inferência Causal e Engenharia de Dados." />
 </svelte:head>
 
@@ -78,7 +78,7 @@
   <div class="character-hud">
     <div class="hud-top-tag">
       <span class="p1-blink">● DISPONÍVEL</span>
-      <span class="hud-poly-tag">FGV EMAp • CR: 8.51</span>
+      <span class="hud-poly-tag">FGV EMAp</span>
     </div>
 
     <h1 class="hud-name">
@@ -93,7 +93,7 @@
     <!-- Bio Text Box -->
     <div class="rpg-dialog-box">
       <p class="dialog-text">
-        "Graduando em Ciência de Dados e Inteligência Artificial na FGV EMAp (CR 8.51).
+        "Graduando em Ciência de Dados e Inteligência Artificial na FGV EMAp.
         Experiência com modelagem preditiva de receita (XGBoost), simulações de Monte Carlo, testes A/B,
         inferência causal (Controles Sintéticos) e engenharia de dados (BigQuery, dbt, Airflow).
         6x medalhista nacional na OBMEP e bolsista CNPq."
@@ -414,7 +414,7 @@
 
   .tech-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: 1.5rem;
   }
 
@@ -457,7 +457,7 @@
 
   .stats-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
     gap: 1.25rem;
   }
 

@@ -47,6 +47,7 @@
           href={`${base}${p.url}`}
           class="nav-tab"
           class:active={isActive}
+          aria-label={p.title}
         >
           <span class="tab-symbol {p.colorClass}">{p.symbol}</span>
           <span class="tab-label">{p.title}</span>
@@ -314,5 +315,42 @@
     font-family: var(--font-ui);
     font-size: 0.72rem;
     color: var(--text-muted);
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .header-inner {
+      justify-content: center;
+    }
+
+    .brand-title,
+    .retro-nav,
+    .header-controls {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .tab-label {
+      display: none;
+    }
+
+    .nav-tab {
+      padding: 8px 12px;
+    }
+
+    .ps1-footer {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .footer-memory-card {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .footer-credits {
+      width: 100%;
+      align-items: center;
+    }
   }
 </style>

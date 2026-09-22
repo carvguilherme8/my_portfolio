@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>PROJETOS | Guilherme Carvalho</title>
+  <title>Projetos | Guilherme Carvalho</title>
   <meta name="description" content="Projetos e aplicações fullstack desenvolvidos por Guilherme Carvalho." />
 </svelte:head>
 

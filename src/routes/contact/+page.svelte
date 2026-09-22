@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>TRANSMISSION: CONTATO | Guilherme Carvalho</title>
+  <title>Contato | Guilherme Carvalho</title>
   <meta name="description" content="Envie uma mensagem ou proposta de trabalho para Guilherme Carvalho." />
 </svelte:head>
 
@@ -20,9 +20,9 @@
 <div class="contact-retro-page">
   <header class="contact-header">
     <div class="tag-ps1">[COMMUNICATIONS TERMINAL]</div>
-    <h1>ESTABELECER CONTATO (TRANSMISSÃO)</h1>
+    <h1>CONTATO</h1>
     <p class="header-desc">
-      Inicie uma conexão para novas missões, propostas de desenvolvimento, visualização de dados ou parcerias.
+      Entre em contato para novas oportunidades, propostas de desenvolvimento, visualização de dados ou parcerias.
     </p>
   </header>
 
