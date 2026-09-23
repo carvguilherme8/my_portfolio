@@ -29,5 +29,22 @@
 			"Suíte completa de testes automatizados E2E com Playwright e testes unitários com Vitest."
 		],
 		"tags": ["React", "Vite", "Tailwind CSS", "Dexie.js", "Supabase", "PWA", "Playwright", "Vitest", "Recharts", "jsPDF"]
+	},
+	{
+		"title": "Análise de Resultados Olímpicos",
+		"year": "2025",
+		"category": "Data Visualization",
+		"image": "/images/dataviz_logo.png",
+		"description": "Plataforma interativa de análise de dados históricos dos Jogos Olímpicos (1986–2018), com três visualizações complementares: evolução temporal do desempenho no atletismo, rede de rivalidades entre atletas e ranking animado de medalhas por nação.",
+		"problem": "Transformar um dataset histórico extenso dos Jogos Olímpicos em uma plataforma exploratória que permita a entusiastas, analistas e historiadores identificar tendências de desempenho, padrões de domínio esportivo e a evolução das competições ao longo das edições.",
+		"highlights": [
+			"Gráfico temporal interativo do desempenho em provas de atletismo, com foco por evento via clique.",
+			"Visualização em rede (force-directed graph com D3) das rivalidades entre atletas, comparando resultados ao passar o mouse.",
+			"Ranking animado de medalhas por país ao longo das edições, com cards dinâmicos trazendo curiosidades de cada edição.",
+			"Projeto final da disciplina de Visualização de Dados (FGV), desenvolvido em grupo com dataset do Kaggle (Olympic Results 1986-2018)."
+		],
+		"tags": ["SvelteKit", "D3.js", "TypeScript", "Vite", "Data Visualization"],
+		"demoUrl": "https://fgv-vis-2025.github.io/final-project-analise-resultados-olimpiadas/",
+		"repoUrl": "https://github.com/FGV-VIS-2025/final-project-analise-resultados-olimpiadas"
 	}
 ]

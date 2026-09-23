@@ -82,6 +82,21 @@
         {/if}
       </div>
     {/if}
+
+    {#if data.demoUrl || data.repoUrl}
+      <div class="save-links">
+        {#if data.demoUrl}
+          <a class="retro-btn link-btn" href={data.demoUrl} target="_blank" rel="noopener noreferrer">
+            [ ACESSAR ]
+          </a>
+        {/if}
+        {#if data.repoUrl}
+          <a class="retro-btn link-btn" href={data.repoUrl} target="_blank" rel="noopener noreferrer">
+            [ REPOSITÓRIO ]
+          </a>
+        {/if}
+      </div>
+    {/if}
   </div>
 </article>
 
@@ -291,6 +306,22 @@
     left: 0.2rem;
     color: var(--color-accent);
     font-weight: bold;
+  }
+
+  .save-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .link-btn {
+    flex: 1 1 auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.7rem;
+    padding: 0.55rem 0.8rem;
+    white-space: nowrap;
   }
 
 </style>
