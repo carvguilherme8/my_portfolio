@@ -46,6 +46,10 @@
       {data.title}
     </svelte:element>
 
+    {#if data.note}
+      <p class="save-note">{data.note}</p>
+    {/if}
+
     <p class="save-desc">
       {data.description}
     </p>
@@ -207,6 +211,14 @@
     font-size: 1.05rem;
     margin: 0;
     line-height: 1.35;
+    color: var(--text-main);
+  }
+
+  .save-note {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
     color: var(--text-main);
   }
 
