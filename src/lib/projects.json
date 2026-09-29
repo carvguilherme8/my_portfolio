@@ -1,20 +1,5 @@
 [
 	{
-		"title": "O Que Tem Pra Hoje (oq-tem-pra-hoje)",
-		"year": "2026",
-		"category": "Fullstack / Edge Serverless / PWA",
-		"image": "/images/oq_logo.png",
-		"description": "Plataforma e PWA que centraliza e notifica transmissões oficiais e gratuitas de futebol no YouTube (CazéTV, Canal GOAT, ge tv), com agenda personalizada ('Time do Coração' em localStorage) e lembretes Web Push nativos sem necessidade de login.",
-		"problem": "Com a fragmentação dos direitos de transmissão esportiva, canais gratuitos no YouTube transmitem jogos oficiais de grandes ligas (Brasileirão, Premier League, La Liga, etc.), mas não existia uma fonte centralizada ou API pública que dissesse exatamente 'onde e quando assistir de graça hoje'.",
-		"highlights": [
-			"Pipeline Híbrido de Dados: Combina football-data.org (calendário/metadados), web scraping server-side estruturado da grade de TV (FotMob) e YouTube Data API v3 para detecção em tempo real de transmissões.",
-			"Algoritmo de Matching e Quota Optimization: Sanitização de títulos e correspondência fuzzy entre nomes de clubes e lives, com cron otimizado para operar dentro do limite diário gratuito da API do YouTube.",
-			"Lembretes Web Push sem Conta: Notificações push nativas no navegador (~5 minutos antes da partida) utilizando Web Push API e Service Workers com VAPID, sem exigir cadastro ou senha.",
-			"Edge Serverless Deployment: Construído com Next.js 16 (App Router) e React 19 no Cloudflare Workers através do OpenNext, garantindo baixíssima latência global com custo de infraestrutura quase zero."
-		],
-		"tags": ["Next.js 16", "React 19", "Cloudflare Workers", "Supabase", "Web Push", "TypeScript", "Tailwind v4", "PWA"]
-	},
-	{
 		"title": "Neurovida — Gestão Terapêutica ABA",
 		"year": "2026",
 		"category": "Fullstack Web App / HealthTech / PWA",
@@ -31,11 +16,27 @@
 		"tags": ["React", "Vite", "Tailwind CSS", "Dexie.js", "Supabase", "PWA", "Playwright", "Vitest", "Recharts", "jsPDF"]
 	},
 	{
+		"title": "O Que Tem Pra Hoje (oq-tem-pra-hoje)",
+		"year": "2026",
+		"category": "Fullstack / Edge Serverless / PWA",
+		"image": "/images/oq_logo.png",
+		"description": "Plataforma e PWA que centraliza e notifica transmissões oficiais e gratuitas de futebol no YouTube (CazéTV, Canal GOAT, ge tv), com agenda personalizada ('Time do Coração' em localStorage) e lembretes Web Push nativos sem necessidade de login.",
+		"problem": "Com a fragmentação dos direitos de transmissão esportiva, canais gratuitos no YouTube transmitem jogos oficiais de grandes ligas (Brasileirão, Premier League, La Liga, etc.), mas não existia uma fonte centralizada ou API pública que dissesse exatamente 'onde e quando assistir de graça hoje'.",
+		"highlights": [
+			"Pipeline Híbrido de Dados: Combina football-data.org (calendário/metadados), web scraping server-side estruturado da grade de TV (FotMob) e YouTube Data API v3 para detecção em tempo real de transmissões.",
+			"Algoritmo de Matching e Quota Optimization: Sanitização de títulos e correspondência fuzzy entre nomes de clubes e lives, com cron otimizado para operar dentro do limite diário gratuito da API do YouTube.",
+			"Lembretes Web Push sem Conta: Notificações push nativas no navegador (~5 minutos antes da partida) utilizando Web Push API e Service Workers com VAPID, sem exigir cadastro ou senha.",
+			"Edge Serverless Deployment: Construído com Next.js 16 (App Router) e React 19 no Cloudflare Workers através do OpenNext, garantindo baixíssima latência global com custo de infraestrutura quase zero."
+		],
+		"tags": ["Next.js 16", "React 19", "Cloudflare Workers", "Supabase", "Web Push", "TypeScript", "Tailwind v4", "PWA"],
+		"demoUrl": "https://oq-tem-pra-hoje.neurovida.workers.dev/"
+	},
+	{
 		"title": "Análise de Resultados Olímpicos",
 		"year": "2025",
 		"category": "Data Visualization",
 		"image": "/images/dataviz_logo.png",
-		"description": "Plataforma interativa de análise de dados históricos dos Jogos Olímpicos (1986–2018), com três visualizações complementares: evolução temporal do desempenho no atletismo, rede de rivalidades entre atletas e ranking animado de medalhas por nação.",
+		"description": "Plataforma interativa de análise de dados históricos dos Jogos Olímpicos (1986–2018), com três visualizações complementares: evolução temporal do desempenho no atletismo, rede de rivalidades entre atletas e ranking animado de medalhas por nação. Recomendo acessar via desktop.",
 		"problem": "Transformar um dataset histórico extenso dos Jogos Olímpicos em uma plataforma exploratória que permita a entusiastas, analistas e historiadores identificar tendências de desempenho, padrões de domínio esportivo e a evolução das competições ao longo das edições.",
 		"highlights": [
 			"Gráfico temporal interativo do desempenho em provas de atletismo, com foco por evento via clique.",
@@ -46,5 +47,21 @@
 		"tags": ["SvelteKit", "D3.js", "TypeScript", "Vite", "Data Visualization"],
 		"demoUrl": "https://fgv-vis-2025.github.io/final-project-analise-resultados-olimpiadas/",
 		"repoUrl": "https://github.com/FGV-VIS-2025/final-project-analise-resultados-olimpiadas"
+	},
+	{
+		"title": "Gol do Messi",
+		"year": "2026",
+		"category": "Fullstack / IA / Football",
+		"image": "/images/gol_do_messi.png",
+		"description": "Aplicação web que encontra um gol específico do Messi no Barcelona a partir de uma descrição em texto livre e do ponto de origem do chute marcado em um campo de futebol interativo, e reproduz o vídeo do lance.",
+		"problem": "Lembrar de um gol é fácil, achar o vídeo dele não: você lembra de onde saiu o chute e de alguns detalhes, mas não do jogo nem da data. O projeto cruza a posição do chute e a descrição para identificar o gol entre os cerca de 474 do Messi pelo Barcelona.",
+		"highlights": [
+			"Busca por vizinho mais próximo da origem do chute contra uma base local com ~474 gols reais do Messi (StatsBomb Open Data, 2004–2021), com texto livre somando à confiança e desempatando candidatos.",
+			"Fallback com LLM (Gemini) quando nenhum gol da base está próximo, retornando candidatos inferidos sem inventar partida ou data.",
+			"Score de confiança: acima de 0,7 o vídeo é resolvido automaticamente via YouTube Data API; abaixo, o usuário escolhe entre até 3 candidatos.",
+			"Pipeline de ingestão resumível em TypeScript que baixa e normaliza os gols do StatsBomb, com validação de dados via Zod."
+		],
+		"tags": ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "Gemini API", "YouTube Data API", "Zod", "Vercel"],
+		"demoUrl": "https://gol-do-messi.vercel.app/"
 	}
 ]

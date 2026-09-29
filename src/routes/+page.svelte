@@ -211,7 +211,7 @@
   </div>
 
   <div class="projects">
-    {#each projects.slice(0, 3) as p}
+    {#each projects as p}
       <Project data={p} hLevel="3" />
     {/each}
   </div>
