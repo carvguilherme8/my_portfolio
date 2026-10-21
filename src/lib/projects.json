@@ -64,5 +64,21 @@
 		],
 		"tags": ["Next.js 16", "React 19", "TypeScript", "Tailwind v4", "Gemini API", "YouTube Data API", "Zod", "Vercel"],
 		"demoUrl": "https://gol-do-messi.vercel.app/"
+	},
+	{
+		"title": "Globo Demográfico Interativo",
+		"year": "2026",
+		"category": "Data Visualization / 3D",
+		"image": "/images/globe.png",
+		"description": "Globo 3D interativo que mostra indicadores demográficos de todos os países entre 1950 e 2100. Cada país tem uma ficha com indicadores, projeção de população com intervalos de incerteza e histórico de fecundidade e expectativa de vida, com nove camadas de mapa para colorir o globo e uma linha do tempo para navegar pelos anos.",
+		"problem": "Tornar explorável o grande volume de projeções demográficas da ONU, permitindo comparar países e acompanhar a evolução de população, fecundidade e expectativa de vida ao longo de mais de 150 anos, incluindo a incerteza das projeções.",
+		"highlights": [
+			"Globo 3D com rotação, zoom e ficha por país ao clicar, com indicadores, histórico de fecundidade e expectativa de vida.",
+			"Gráfico de população com intervalos de predição de 80% e 95% a partir das projeções probabilísticas da ONU.",
+			"Nove camadas de mapa, linha do tempo de 1950 a 2100 e alternância de idioma PT/EN.",
+			"Arquivo HTML único e autocontido (bibliotecas e dados embutidos), que funciona inclusive offline."
+		],
+		"tags": ["globe.gl", "three.js", "JavaScript", "Data Visualization", "UN WPP 2024"],
+		"demoUrl": "https://carvguilherme8.github.io/demographic-globe/"
 	}
 ]
